@@ -60,6 +60,6 @@ var _vnode = readDOM(document.body);
 var vnode = render_tree();
 
 # initiate the first patch
-patch _vnode, vnode
+patch(_vnode, vnode);
 
 ```
