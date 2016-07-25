@@ -4,15 +4,15 @@ This package includes two functions, which useful for client-server applications
 
 ## Write HTML
 
-At first you may want to produce HTML output from virtual nodes on server-side.
-The `writeHTML` function do this thing.
+On the server side you usually want produce HTML output from virtual nodes.
+The `writeHTML` function does this thing for you.
 
 The supported features includes attributes, style and class.
 
 The another way to do this is using `snabbdom-to-html` package.
-This package has simple and clean alternative for it.
+This package is a simple and clean alternative for it.
 
-Usage example:
+Typical usage:
 
 ```javascript
 
@@ -32,14 +32,14 @@ response.write(html);
 
 ## Read DOM
 
-At second you may want to read initial DOM before first `patch` call on initializing your application on client-side.
+On the client side you may read initial DOM before first `patch` when initializing your application.
 The `readDOM` function does this thing.
 
-This piece of code is ported from `snabbdom-virtualize` with key differences:
+This piece of code has been ported from `snabbdom-virtualize` with key differences:
 
-1. Reading event listeners is missing because this feature is useless for our purposes.
-2. No DOM calls for decoding HTML entities, instead we use `html-entities` package.
-3. Single text child in vnode are supported.
+1. Event listeners has been removed because this is useless for our purposes.
+2. Decoding HTML entities using `html-entities` package instead of DOM API calls.
+3. Added support of the single text child in non-text vnode.
 
 Usage example:
 
