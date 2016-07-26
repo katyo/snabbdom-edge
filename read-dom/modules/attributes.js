@@ -8,8 +8,9 @@ module.exports = function(data, elm) {
     var key = attr.name;
 
     if (key !== 'style' &&
-        key !== 'class') {
-      
+        key !== 'class' &&
+        !(/^data-/.test(key))) {
+
       if (!data.attrs) {
         data.attrs = {};
       }
