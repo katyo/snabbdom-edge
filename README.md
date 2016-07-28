@@ -69,7 +69,7 @@ var readDOM = require("snabbdom-edge/read-dom").init([
   require("snabbdom-edge/read-dom/modules/class"), // makes it support toggled classes
   // the props is only on client-side
   require("snabbdom-edge/read-dom/modules/style"), // handles styling on elements
-  require("snabbdom-edge/read-dom/modules/attributes") // handles all other attributes
+  require("snabbdom-edge/read-dom/modules/attributes")() // handles all other attributes
 ]);
 
 //before starting application on client
