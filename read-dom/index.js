@@ -10,9 +10,10 @@ function readNode(hooks, elm) {
   /* If not a text node, then build up a VNode based on the elm's tag name, class and style attributes, and remaining attributes. */
 
   /* Special values: style, class. We don't include these in the attrs hash of the VNode. */
-  var data = {};
+  var data = {},
+      i;
 
-  for (var i = 0; i < hooks.length; i++) {
+  for (i = 0; i < hooks.length; i++) {
     hooks[i](data, elm);
   }
 
@@ -24,12 +25,13 @@ function readNode(hooks, elm) {
     if (childNodes.length > 0) {
       children = [];
 
-      for (var i = 0; i < childNodes.length; i++) {
-        children.push(readNode(childNodes.item(i)));
+      for (i = 0; i < childNodes.length; i++) {
+        children.push(readNode(hooks, childNodes.item(i)));
       }
     }
 
-    if (children.length == 1) { /* Set single text node as text property */
+    if (children && children.length == 1) {
+      /* Set single text node as text property */
       var child = children[0];
       if (!child.sel && !child.data && child.text) {
         children = undefined;
@@ -51,6 +53,6 @@ function readDOM(elm, hooks) {
 
 exports.init = function(modules) {
   return function(element) {
-    readDOM(element, modules);
+    return readDOM(element, modules);
   };
 };
