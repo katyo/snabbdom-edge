@@ -1,4 +1,4 @@
-var VNode = require("snabbdom/vnode");
+var VNode = require("snabbdom/vnode").default;
 var entities = require("html-entities/lib/html5-entities").prototype;
 
 function readNode(hooks, elm) {
