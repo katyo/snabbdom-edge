@@ -1,56 +1,21 @@
 import {VNodeData} from 'snabbdom/vnode';
 import {Module, AddAttribute} from './module';
 
-interface LookupAttrs {
-  [key: string]: number;
-};
+/* Boolean attributes regexp generator (elisp)
+   You can edit list of properties and re-evaluate expression
 
-const booleanAttrs: LookupAttrs = {
-  allowfullscreen: 1,
-  async: 1,
-  autofocus: 1,
-  autoplay: 1,
-  checked: 1,
-  compact: 1,
-  controls: 1,
-  declare: 1,
-  default: 1,
-  defaultchecked: 1,
-  defaultmuted: 1,
-  defaultselected: 1,
-  defer: 1,
-  disabled: 1,
-  draggable: 1,
-  enabled: 1,
-  formnovalidate: 1,
-  hidden: 1,
-  indeterminate: 1,
-  inert: 1,
-  ismap: 1,
-  itemscope: 1,
-  loop: 1,
-  multiple: 1,
-  muted: 1,
-  nohref: 1,
-  noresize: 1,
-  noshade: 1,
-  novalidate: 1,
-  nowrap: 1,
-  open: 1,
-  pauseonexit: 1,
-  readonly: 1,
-  required: 1,
-  reversed: 1,
-  scoped: 1,
-  seamless: 1,
-  selected: 1,
-  sortable: 1,
-  spellcheck: 1,
-  translate: 1,
-  truespeed: 1,
-  typemustmatch: 1,
-  visible: 1
-};
+   (replace-regexp "\\(booleanAttrsRegex = \\)[^;]*;"
+   (concat "\\1/^" (replace-regexp-in-string "\\\\" "" (regexp-opt '(
+   "allowfullscreen" "async" "autofocus" "autoplay" "checked" "compact" "controls" "declare"
+   "default" "defaultchecked" "defaultmuted" "defaultselected" "defer" "disabled" "draggable"
+   "enabled" "formnovalidate" "hidden" "indeterminate" "inert" "ismap" "itemscope" "loop" "multiple"
+   "muted" "nohref" "noresize" "noshade" "novalidate" "nowrap" "open" "pauseonexit" "readonly"
+   "required" "reversed" "scoped" "seamless" "selected" "sortable" "spellcheck" "translate"
+   "truespeed" "typemustmatch" "visible"
+   ))) "$/;"))
+*/
+
+export const booleanAttrsRegex = /^(?:a(?:llowfullscreen|sync|uto(?:focus|play))|c(?:hecked|o(?:mpact|ntrols))|d(?:e(?:clare|f(?:ault(?:(?:check|(?:mu|selec)t)ed)?|er))|isabled|raggable)|enabled|formnovalidate|hidden|i(?:n(?:determinate|ert)|smap|temscope)|loop|mu(?:ltiple|ted)|no(?:href|resize|shade|validate|wrap)|open|pauseonexit|re(?:adonly|(?:quir|vers)ed)|s(?:coped|e(?:amless|lected)|ortable|pellcheck)|t(?:r(?:anslate|uespeed)|ypemustmatch)|visible)$/;
 
 export const attributesModule: Module = function(data: VNodeData, addAttribute: AddAttribute): void {
   var {attrs} = data;
@@ -59,7 +24,7 @@ export const attributesModule: Module = function(data: VNodeData, addAttribute: 
     for (let key in attrs) {
       if (key && attrs.hasOwnProperty(key) &&
           key != "style" && key != "class") {
-        if (booleanAttrs[key]) {
+        if (booleanAttrsRegex.test(key)) {
           if (attrs[key]) {
             addAttribute(key);
           }
