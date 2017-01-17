@@ -16,6 +16,7 @@
     ]
   },
   "files": [
+    "src/snabbdom-edge.ts",
     "src/write-html.ts",
     "src/write-html/attributes.ts",
     "src/write-html/class.ts",

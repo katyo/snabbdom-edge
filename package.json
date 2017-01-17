@@ -2,8 +2,8 @@
   "name": "snabbdom-edge",
   "version": "1.0.0",
   "description": "The I/O for snabbdom (write HTML on server and read DOM on client).",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "main": "snabbdom-edge.js",
+  "typings": "snabbdom-edge.d.ts",
   "directories": {
     "example": "examples",
     "test": "test"
