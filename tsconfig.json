@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "outDir": "./",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "removeComments": false,
+    "noUnusedLocals": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.core"
+    ]
+  },
+  "files": [
+    "src/write-html.ts",
+    "src/write-html/attributes.ts",
+    "src/write-html/class.ts",
+    "src/write-html/dataset.ts",
+    "src/write-html/style.ts",
+    "src/read-dom.ts",
+    "src/read-dom/attributes.ts",
+    "src/read-dom/class.ts",
+    "src/read-dom/dataset.ts",
+    "src/read-dom/style.ts"
+  ]
+}

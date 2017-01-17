@@ -3,8 +3,40 @@
   "version": "1.0.0",
   "description": "The I/O for snabbdom (write HTML on server and read DOM on client).",
   "main": "index.js",
+  "typings": "index.d.ts",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {
+    "html-entities": "^1.2.0"
+  },
+  "peerDependencies": {
+    "snabbdom": "*"
+  },
+  "devDependencies": {
+    "benchmark": "^1.0.0",
+    "browserify": "^13.0.0",
+    "fake-raf": "0.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "knuth-shuffle": "^1.0.1",
+    "snabbdom": "*",
+    "testem": "^1.0.2",
+    "typescript": "^2.1.0",
+    "xyz": "0.5.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "npm run compile",
+    "test": "testem",
+    "compile": "tsc",
+    "prepublish": "npm run compile",
+    "release-major": "xyz --repo git@github.com:katyo/snabbdom-edge.git --increment major",
+    "release-minor": "xyz --repo git@github.com:katyo/snabbdom-edge.git --increment minor",
+    "release-patch": "xyz --repo git@github.com:katyo/snabbdom-edge.git --increment patch"
   },
   "repository": {
     "type": "git",
@@ -23,8 +55,5 @@
   "bugs": {
     "url": "https://github.com/katyo/snabbdom-edge/issues"
   },
-  "homepage": "https://github.com/katyo/snabbdom-edge#readme",
-  "dependencies": {
-    "html-entities": "^1.2.0"
-  }
+  "homepage": "https://github.com/katyo/snabbdom-edge#readme"
 }

@@ -2,3 +2,7 @@ node_modules
 dist
 npm-debug.log*
 .npm
+*.js
+*.js.map
+*.d.ts
+!foreign.d.ts
