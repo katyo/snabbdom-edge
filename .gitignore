@@ -6,3 +6,4 @@ npm-debug.log*
 *.js.map
 *.d.ts
 !foreign.d.ts
+!test/*.js
