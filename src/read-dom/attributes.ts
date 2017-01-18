@@ -2,6 +2,7 @@
 
 import {VNodeData} from 'snabbdom/vnode';
 import {Module} from './module';
+import {booleanAttrsRegex} from '../util';
 
 export interface Options {
   style: boolean;
@@ -24,7 +25,7 @@ function readAttrs(data: VNodeData, elm: Element, opts: Options): void {
         data.attrs = {};
       }
       
-      data.attrs[name] = value;
+      data.attrs[name] = booleanAttrsRegex.test(name) ? true : value;
     }
   }
 }
