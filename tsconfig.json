@@ -26,6 +26,7 @@
     "src/read-dom/attributes.ts",
     "src/read-dom/class.ts",
     "src/read-dom/dataset.ts",
-    "src/read-dom/style.ts"
+    "src/read-dom/style.ts",
+    "src/util.ts"
   ]
 }
