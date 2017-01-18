@@ -10,13 +10,13 @@ function writeNode(stm: WritableStream, vnode: VNode, hooks: Array<Module>): voi
     return;
   }
 
-  let content = "<" + vnode.sel;
+  let content = `<${vnode.sel}`;
 
   function addAttribute(name: string, value?: string): void {
-    content += name;
+    content += ` ${name}`;
 
     if (value != null) {
-      content += "=\"" + entities.encode(value) + "\"";
+      content += `="${entities.encode(`${value}`)}"`;
     }
   }
 
@@ -26,7 +26,7 @@ function writeNode(stm: WritableStream, vnode: VNode, hooks: Array<Module>): voi
 
   const hasChildren = vnode.children && vnode.children.length > 0;
 
-  stm.write(content + ">");
+  stm.write(`${content}>`);
 
   if (hasChildren) {
     const {children = []} = vnode;
@@ -38,7 +38,7 @@ function writeNode(stm: WritableStream, vnode: VNode, hooks: Array<Module>): voi
     stm.write(entities.encode(vnode.text));
   }
 
-  stm.write("</" + vnode.sel + ">");
+  stm.write(`</${vnode.sel}>`);
 }
 
 function writeHtml(hooks: Array<Module>, vnode: VNode, stm?:WritableStream): string | undefined {
