@@ -1,4 +1,4 @@
-import {VNodeData} from 'snabbdom/vnode';
+import {VNodeData} from 'snabbdom/build/package/vnode';
 import {Module, AddAttribute} from './module';
 import {booleanAttrsRegex} from '../util';
 
@@ -14,7 +14,7 @@ export const attributesModule: Module = function(data: VNodeData, addAttribute: 
             addAttribute(key);
           }
         } else {
-          addAttribute(key, attrs[key]);
+          addAttribute(key, attrs[key] as string);
         }
       }
     }

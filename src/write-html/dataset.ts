@@ -1,4 +1,4 @@
-import {VNodeData} from 'snabbdom/vnode';
+import {VNodeData} from 'snabbdom/build/package/vnode';
 import {Module, AddAttribute} from './module';
 
 export const datasetModule: Module = function(data: VNodeData, addAttribute: AddAttribute): void {
