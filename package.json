@@ -1,6 +1,6 @@
 {
   "name": "snabbdom-edge",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The I/O for snabbdom (write HTML on server and read DOM on client).",
   "main": "snabbdom-edge.js",
   "typings": "snabbdom-edge.d.ts",
