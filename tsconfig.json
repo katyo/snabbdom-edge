@@ -12,7 +12,14 @@
     "lib": [
       "dom",
       "es2015"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "snabbdom/*": [ 
+        "node_modules/snabbdom/*",
+        "node_modules/snabbdom/build/package/*"
+      ]
+    }
   },
   "files": [
     "src/snabbdom-edge.ts",
