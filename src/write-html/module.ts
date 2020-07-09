@@ -1,4 +1,4 @@
-import {VNodeData} from 'snabbdom/vnode';
+import {VNodeData} from 'snabbdom/build/package/vnode';
 
 export interface AddAttribute {
   (key: string): void;

@@ -1,5 +1,5 @@
 /* Read set of datas from the elm. */
-import {VNodeData} from 'snabbdom/vnode';
+import {VNodeData} from 'snabbdom/build/package/vnode';
 import {Module} from './module';
 
 export const datasetModule: Module = function(data: VNodeData, elm: Element): void {
@@ -14,7 +14,7 @@ export const datasetModule: Module = function(data: VNodeData, elm: Element): vo
           data.dataset = {};
         }
         
-        data.dataset[key] = value;
+        data.dataset[key] = value as string;
       }
     }
   }

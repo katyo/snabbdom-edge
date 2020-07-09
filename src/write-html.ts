@@ -1,7 +1,7 @@
 /// <reference path="../foreign.d.ts"/>
 
-import {VNode, VNodeData} from 'snabbdom/vnode';
-import {prototype as entities} from 'html-entities/lib/html5-entities';
+import {VNode, VNodeData} from 'snabbdom/build/package/vnode';
+import {Html5Entities as entities} from 'html-entities';
 import {Module} from './write-html/module';
 
 function writeNode(stm: WritableStream, vnode: VNode, hooks: Array<Module>): void {
@@ -54,10 +54,10 @@ function writeHtml(hooks: Array<Module>, vnode: VNode, stm?:WritableStream): str
       write: function(str) {
         res += str;
       }
-    };
+    } as WritableStream;
   }
 
-  writeNode(stm, vnode, hooks);
+  writeNode(stm as WritableStream, vnode, hooks);
 
   return res;
 }

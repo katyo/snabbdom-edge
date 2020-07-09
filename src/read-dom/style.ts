@@ -1,5 +1,5 @@
 /* Builds the style object for the VNode. */
-import {VNodeData} from 'snabbdom/vnode';
+import {VNodeData} from 'snabbdom/build/package/vnode';
 import {Module} from './module';
 
 export const styleModule: Module = function(data: VNodeData, elm: Element): void {

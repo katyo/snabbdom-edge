@@ -1,7 +1,7 @@
 /// <reference path="../foreign.d.ts"/>
 
-import {vnode, VNode, VNodeData} from 'snabbdom/vnode';
-import {prototype as entities} from 'html-entities/lib/html5-entities';
+import {vnode, VNode, VNodeData} from 'snabbdom/build/package/vnode';
+import {Html5Entities as entities} from 'html-entities';
 import {Module} from './read-dom/module';
 
 function readNode(hooks: Array<Module>, elm: Element): VNode {

@@ -1,6 +1,6 @@
 /* Build up set of attributes on the elm. */
 
-import {VNodeData} from 'snabbdom/vnode';
+import {VNodeData} from 'snabbdom/build/package/vnode';
 import {Module} from './module';
 import {booleanAttrsRegex} from '../util';
 
@@ -15,7 +15,7 @@ function readAttrs(data: VNodeData, elm: Element, opts: Options): void {
   
   for (let i = 0; i < attributes.length; i++) {
     const attr = attributes.item(i);
-    const {name, value} = attr;
+    const {name, value} = attr as Attr;
     
     if ((opts.style || name !== 'style') &&
         (opts.class || name !== 'class') &&
