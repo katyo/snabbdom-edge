@@ -1,6 +1,6 @@
 {
   "name": "snabbdom-edge",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "The I/O for snabbdom (write HTML on server and read DOM on client).",
   "main": "snabbdom-edge.js",
   "typings": "snabbdom-edge.d.ts",
@@ -12,17 +12,16 @@
     "html-entities": "^1.2.0"
   },
   "peerDependencies": {
-    "snabbdom": "*"
+    "snabbdom": "^1"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babelify": "^10.0.0",
     "benchmark": "^1.0.0",
     "browserify": "^13.0.0",
     "fake-raf": "0.0.1",
-    "gulp": "^4.0.2",
-    "gulp-clean": "^0.3.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
     "knuth-shuffle": "^1.0.1",
     "snabbdom": "^1.0.1",
     "testem": "^3.2.0",
