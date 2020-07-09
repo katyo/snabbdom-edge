@@ -8,7 +8,7 @@ var writeHTML = require('../write-html').init([
   require("../write-html/attributes").default // handles all other attributes
 ]);
 
-var h = require('snabbdom/h').default;
+var h = require('snabbdom/build/package/h').h;
 
 describe('write-html html', function() {
   it('generic document tree', function(){

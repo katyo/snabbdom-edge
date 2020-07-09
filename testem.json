@@ -8,7 +8,7 @@
   "serve_files": [
     "browserified.js"
   ],
-  "before_tests": "browserify -d test/index.js -o browserified.js",
+  "before_tests": "browserify -d test/index.js -o browserified.js -t [ babelify --global --presets [ @babel/preset-env ] --plugins [ @babel/plugin-transform-modules-commonjs ] ]",
   "on_exit": "rm browserified.js",
   "launch_in_dev": [ "firefox", "chromium" ]
 }
