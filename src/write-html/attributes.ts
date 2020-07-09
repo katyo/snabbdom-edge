@@ -1,4 +1,4 @@
-import {VNodeData} from 'snabbdom/build/package/vnode';
+import {VNodeData} from 'snabbdom/vnode';
 import {Module, AddAttribute} from './module';
 import {booleanAttrsRegex} from '../util';
 

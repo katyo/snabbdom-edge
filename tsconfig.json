@@ -13,7 +13,14 @@
       "dom",
       "es5",
       "es2015.core"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "snabbdom/*": [ 
+        "node_modules/snabbdom/*",
+        "node_modules/snabbdom/build/package/*"
+      ]
+    }
   },
   "files": [
     "src/snabbdom-edge.ts",

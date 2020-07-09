@@ -1,6 +1,6 @@
 /* Build up set of attributes on the elm. */
 
-import {VNodeData} from 'snabbdom/build/package/vnode';
+import {VNodeData} from 'snabbdom/vnode';
 import {Module} from './module';
 import {booleanAttrsRegex} from '../util';
 

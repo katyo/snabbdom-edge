@@ -1,5 +1,5 @@
 /* Read set of datas from the elm. */
-import {VNodeData} from 'snabbdom/build/package/vnode';
+import {VNodeData} from 'snabbdom/vnode';
 import {Module} from './module';
 
 export const datasetModule: Module = function(data: VNodeData, elm: Element): void {
