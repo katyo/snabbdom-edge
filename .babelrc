@@ -1,0 +1,10 @@
+{
+  "plugins": [
+      ["module-resolver", {
+          "root": ["."],
+          "alias": {
+              "snabbdom": "./node_modules/snabbdom/build/package"
+          }
+      }]
+  ]
+}

@@ -8,7 +8,7 @@ var readDOM = require('../read-dom').init([
   require("../read-dom/attributes").default() // handles all other attributes
 ]);
 
-var h = require('snabbdom/build/package/h').h;
+var h = require('snabbdom/h').h;
 
 describe('read-dom html', function() {
   var elm;
