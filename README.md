@@ -1,5 +1,9 @@
 # Snabbdom Edge
 
+[![npm version](https://badge.fury.io/js/snabbdom-edge.svg)](https://badge.fury.io/js/snabbdom-edge)
+[![npm downloads](https://img.shields.io/npm/dm/snabbdom-edge.svg)](https://www.npmjs.com/package/snabbdom-edge)
+[![Build Status](https://travis-ci.com/katyo/snabbdom-edge.svg?branch=master)](https://travis-ci.com/katyo/snabbdom-edge)
+
 This package includes two functions, which useful for client-server applications built with **snabbdom**.
 Like the **snabbdom** this library is focused on simplicity, modularity, powerful features and performance.
 

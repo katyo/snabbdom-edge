@@ -30,7 +30,7 @@
   },
   "scripts": {
     "pretest": "npm run compile",
-    "test": "testem",
+    "test": "if [ -z \"$TRAVIS_NODE_VERSION\" ]; then testem; else testem ci; fi",
     "compile": "tsc",
     "prepublish": "npm run compile",
     "release-major": "xyz --repo git@github.com:katyo/snabbdom-edge.git --increment major",
