@@ -1,6 +1,6 @@
 /// <reference path="../foreign.d.ts"/>
 
-import {VNode, VNodeData} from 'snabbdom/build/package/vnode';
+import {VNode, VNodeData} from 'snabbdom/vnode';
 import {Html5Entities as entities} from 'html-entities';
 import {Module} from './write-html/module';
 
