@@ -18,7 +18,7 @@
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
-    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-module-resolver": "^5.0.0",
     "babelify": "^10.0.0",
     "benchmark": "^1.0.0",
     "browserify": "^13.0.0",
